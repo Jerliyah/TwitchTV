@@ -103,11 +103,11 @@ var Twitch = [
     }
 },
 
-// Error
-{
-    "error": "Not Found",
-    "status": 404,
-    "message": "Channel 'not-a-valid-account' does not exist"
-}
+// Error ( Causes more trouble than it helps)
+// {
+//     "error": "Not Found",
+//     "status": 404,
+//     "message": "Channel 'not-a-valid-account' does not exist"
+// }
 
 ]

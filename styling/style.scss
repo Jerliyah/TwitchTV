@@ -16,39 +16,37 @@ $yellow: #ffff00;
 @mixin statusButton($color) {
     border: 3px solid $color;
 
-    & > div {
-        background: $color;
-    }
+    & > div { background: $color; }
 
     &:hover {
-        a {
-            color: white;
-        }
+        h2 { color: white; }
     }
 
-    &.active {
-        box-shadow: 0 0 20px $color;
-    }
+    &.active { box-shadow: 0 0 20px $color; }
 }
 
 
+// =============================================================================
 
 body {
     background: url("../images/background1.jpg");
     background-size: 100% 100%;
     min-height: 100vh;
     margin: 0;
-    padding: 65px 0;
+    padding: 0;
     color: $purple;
     font-family: sans-serif;
 }
 
 #ctn {
-    max-width: 800px;
+    max-width: 1200px;
+    min-height: 100vh;
+    box-sizing: border-box;
     background: rgba(255,255,255,0.5);
     border-left: 5px solid white;
     border-right: 5px solid white;
     margin: auto;
+    padding: 30px 0;
 }
 
 header {
@@ -62,12 +60,9 @@ header {
     height: 100%;
 }
 
-ul, main {
+ul {
     display: flex;
     justify-content: space-around;
-}
-
-ul {
     list-style: none;
 }
 
@@ -80,15 +75,20 @@ li {
     padding: 0.5em 1em;
     display: flex;
     align-items: center;
-}
 
-li > div {
-    height: 15px;
-    width: 15px;
-    border-radius: 100%;
-    border: 2px solid white;
-    display: inline-block;
-    margin-right: 10px;
+    div {
+       height: 15px;
+       width: 15px;
+       border-radius: 100%;
+       border: 2px solid white;
+       display: inline-block;
+       margin-right: 10px;
+   }
+
+   h2 {
+       margin: 0;
+       font-size: 15px;
+   }
 }
 
 .blue {
@@ -101,6 +101,22 @@ li > div {
     @include statusButton($yellow);
 }
 
-a {
-    text-decoration: none;
+main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+}
+
+.profiles {
+    height: 250px;
+    width: 250px;
+}
+
+.profile-images {
+    height: 90%;
+    width: 90%;
+    border-radius:100%;
+    border: 2em solid $blue;
+    box-sizing: border-box;
 }

@@ -3,16 +3,19 @@ body {
   background-size: 100% 100%;
   min-height: 100vh;
   margin: 0;
-  padding: 65px 0;
+  padding: 0;
   color: #4B367C;
   font-family: sans-serif; }
 
 #ctn {
-  max-width: 800px;
+  max-width: 1200px;
+  min-height: 100vh;
+  box-sizing: border-box;
   background: rgba(255, 255, 255, 0.5);
   border-left: 5px solid white;
   border-right: 5px solid white;
-  margin: auto; }
+  margin: auto;
+  padding: 30px 0; }
 
 header {
   display: flex;
@@ -23,11 +26,9 @@ header {
 #twitch-logo {
   height: 100%; }
 
-ul, main {
-  display: flex;
-  justify-content: space-around; }
-
 ul {
+  display: flex;
+  justify-content: space-around;
   list-style: none; }
 
 li {
@@ -38,20 +39,22 @@ li {
   padding: 0.5em 1em;
   display: flex;
   align-items: center; }
-
-li > div {
-  height: 15px;
-  width: 15px;
-  border-radius: 100%;
-  border: 2px solid white;
-  display: inline-block;
-  margin-right: 10px; }
+  li div {
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    border: 2px solid white;
+    display: inline-block;
+    margin-right: 10px; }
+  li h2 {
+    margin: 0;
+    font-size: 15px; }
 
 .blue {
   border: 3px solid #1ad1ff; }
   .blue > div {
     background: #1ad1ff; }
-  .blue:hover a {
+  .blue:hover h2 {
     color: white; }
   .blue.active {
     box-shadow: 0 0 20px #1ad1ff; }
@@ -60,7 +63,7 @@ li > div {
   border: 3px solid #00ff00; }
   .green > div {
     background: #00ff00; }
-  .green:hover a {
+  .green:hover h2 {
     color: white; }
   .green.active {
     box-shadow: 0 0 20px #00ff00; }
@@ -69,12 +72,26 @@ li > div {
   border: 3px solid #ffff00; }
   .yellow > div {
     background: #ffff00; }
-  .yellow:hover a {
+  .yellow:hover h2 {
     color: white; }
   .yellow.active {
     box-shadow: 0 0 20px #ffff00; }
 
-a {
-  text-decoration: none; }
+main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1rem 2rem; }
+
+.profiles {
+  height: 250px;
+  width: 250px; }
+
+.profile-images {
+  height: 90%;
+  width: 90%;
+  border-radius: 100%;
+  border: 2em solid #1ad1ff;
+  box-sizing: border-box; }
 
 /*# sourceMappingURL=style.css.map */
