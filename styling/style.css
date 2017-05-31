@@ -119,4 +119,22 @@ main {
 .offline {
   border: 2em solid #ffff00; }
 
+.info-overlay {
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 5%;
+  height: 90%;
+  width: 90%;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px; }
+  .info-overlay p {
+    margin: 0;
+    font-weight: bold; }
+
 /*# sourceMappingURL=style.css.map */
