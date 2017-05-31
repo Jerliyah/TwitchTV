@@ -1,7 +1,14 @@
-// On page load defaults
+/*
+    TABLE OF CONTENTS:
+    1) Streamer Population
+    2) Redirection to Twitch pages - Line 101
+    3)
+*/
+
+//==============================================================================
+
+// On page load default
 populate_streamers('all')
-
-
 
 // Grab the All, Online, and Offline options
 let buttons = document.querySelectorAll('li');
@@ -21,7 +28,6 @@ function make_active() {
     let activeStatus = $(this).attr("value");
     populate_streamers(activeStatus);
 }
-
 
 
 function get_streamers(whichStreamers) {
@@ -77,17 +83,26 @@ function populate_streamers(inputStatus) {
 
     $.each(streamers, function(index, streamer) {
         if(streamer.logo === undefined) {
-            var profileImageUrl = "images/logo3.png";
+            var imageUrl = "images/logo3.png";
+            var twitchUrl = `https://www.twitch.tv/${streamer.display_name.toLowerCase()}`
         }
         else {
-            var profileImageUrl = streamer.logo;
+            var imageUrl = streamer.logo;
+            var twitchUrl = `https://www.twitch.tv/${streamer.name}`
         }
 
+        let displayName = streamer.display_name;
+
         $('main').append(`
-            <div class="profiles">
-                <img class="profile-images" src="${profileImageUrl}" />
-            </div>
+            <a href="${twitchUrl}"
+                <div class="profiles">
+                    <img class="profile-images" src="${imageUrl}" />
+                    <h2>${displayName}</h2>
+                </div>
+            </a>
         `)
     })
 
 }
+
+// =============================================================================
