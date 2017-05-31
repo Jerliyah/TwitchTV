@@ -32,6 +32,7 @@ header {
 ul {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   list-style: none; }
 
 li {
@@ -92,16 +93,30 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1em 0; }
-  .profiles h2 {
-    margin: 0;
-    font-size: 15px; }
+  margin: 1em 0;
+  position: relative; }
 
 .profile-images {
   height: 90%;
   width: 90%;
   border-radius: 100%;
-  border: 2em solid #1ad1ff;
   box-sizing: border-box; }
+
+.profile-names {
+  position: absolute !important;
+  top: 5px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  font-size: 20px; }
+
+.profile-statuses {
+  margin-top: -2em; }
+
+.online {
+  border: 2em solid #00ff00; }
+
+.offline {
+  border: 2em solid #ffff00; }
 
 /*# sourceMappingURL=style.css.map */
