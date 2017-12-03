@@ -31,11 +31,11 @@ $yellow: #ffff00;
 body {
     background: url("../images/background1.jpg");
     background-size: 100% 100%;
+    color: $purple;
+    font-family: sans-serif;
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    color: $purple;
-    font-family: sans-serif;
 }
 
 a {
@@ -43,20 +43,20 @@ a {
 }
 
 #ctn {
-    max-width: 1200px;
-    min-height: 100vh;
     box-sizing: border-box;
     background: rgba(255,255,255,0.5);
     border-left: 5px solid white;
     border-right: 5px solid white;
     margin: auto;
+    max-width: 1200px;
+    min-height: 100vh;
     padding: 30px 0;
 }
 
 header {
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
     text-transform: uppercase;
 }
 
@@ -65,34 +65,35 @@ header {
 }
 
 ul {
+    flex-wrap: wrap;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
     list-style: none;
 }
 
 li {
+    align-items: center;
+
     /*For older browsers*/
     background: $darkGrey;
     /*For browsers that support gradients*/
     background: linear-gradient(to top, $darkGrey, $lightGrey);
 
-    padding: 0.5em 1em;
     display: flex;
-    align-items: center;
+    padding: 0.5em 1em;
 
     div {
-       height: 15px;
-       width: 15px;
-       border-radius: 100%;
-       border: 2px solid white;
-       display: inline-block;
-       margin-right: 10px;
+        border: 2px solid white;
+        border-radius: 100%;
+        display: inline-block;
+        height: 15px;
+        margin-right: 10px;
+        width: 15px;    
    }
 
    h2 {
-       margin: 0;
-       font-size: 15px;
+        font-size: 15px;
+        margin: 0;
    }
 }
 
@@ -121,6 +122,16 @@ main {
     align-items: center;
     margin: 1em 0;
     position: relative;
+
+    &:hover{
+        img {
+            box-shadow: 0 0 30px white;
+        }
+
+        h2 {
+            text-shadow: 0 0 5px white;
+        }
+    }
 }
 
 .profile-images {
